@@ -21,6 +21,7 @@ Praticar o consumo de APIs em uma aplicação web, realizando requisições para
 não é necessário nenhum pré-requisito é só acessar o projeto pelo link disponibilizado em [Acesso ao Projeto](#acesso-ao-projeto) e utiliza-lo.
 
 ## Resultado final do projeto
+![demonstracao](https://github.com/user-attachments/assets/32071042-be97-45e8-b5bd-cc7b38230356)
 
 
 
@@ -31,7 +32,7 @@ não é necessário nenhum pré-requisito é só acessar o projeto pelo link dis
 
 
 ## Acesso ao Projeto
-para acessar o projeto utilize o seguinte link: 
+para acessar o projeto utilize o seguinte link: https://pokedex-gen1-project.netlify.app/
 
 
 ## Tecnologias utilizadas
