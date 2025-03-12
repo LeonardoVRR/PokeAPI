@@ -154,7 +154,7 @@ function pokemonCardContainer() {
 
     const pokeName = document.createElement("h3")
     pokeName.setAttribute("class", "namePokemon")
-    pokeName.textContent = data.name
+    pokeName.textContent = toTitle(data.name)
 
     const pokeTypes = document.createElement("div")
     pokeTypes.setAttribute("class", "pokemonTypes")
@@ -163,8 +163,14 @@ function pokemonCardContainer() {
       const type1 = document.createElement("p")
       const type2 = document.createElement("p")
 
+      const type1_name = data.types[0].type.name
+      const type2_name = data.types[1].type.name
+
       type1.textContent = data.types[0].type.name
       type2.textContent = data.types[1].type.name
+
+      typeColor(type1_name, type1)
+      typeColor(type2_name, type2)
 
       pokeTypes.append(type1, type2)
     }
@@ -172,6 +178,10 @@ function pokemonCardContainer() {
     else {
       const type1 = document.createElement("p")
       type1.textContent = data.types[0].type.name
+
+      const type1_name = data.types[0].type.name
+
+      typeColor(type1_name, type1)
 
       pokeTypes.appendChild(type1)
     }
@@ -183,6 +193,88 @@ function pokemonCardContainer() {
     pokemonCardsArea.appendChild(pokeCardContainer)
 
   })
+}
+
+function typeColor(type, typeContainer) {
+
+  switch (type) {
+
+    case "bug":
+      typeContainer.style.backgroundColor = "#aaba27"
+      break;
+
+    case "dark":
+      typeContainer.style.backgroundColor = "#47392c"
+      break;
+
+    case "dragon":
+      typeContainer.style.backgroundColor = "#715cdd"
+      break;
+
+    case "eletric":
+      typeContainer.style.backgroundColor = "#fabb17"
+      break;
+      
+    case "fairy":
+      typeContainer.style.backgroundColor = "#f2aff2"
+      break;
+
+    case "fighting":
+      typeContainer.style.backgroundColor = "#7c3419"
+      break;
+
+    case "fire":
+      typeContainer.style.backgroundColor = "#ed420f"
+      break;
+
+    case "flying":
+      typeContainer.style.backgroundColor = "#93a4f2"
+      break;
+
+    case "ghost":
+      typeContainer.style.backgroundColor = "#5e60a8"
+      break;
+  
+    case "grass":
+      typeContainer.style.backgroundColor = "#72c032"
+      break;
+
+    case "ground":
+      typeContainer.style.backgroundColor = "#cdaf56"
+      break;
+      
+    case "ice":
+      typeContainer.style.backgroundColor = "#7cd9f6"
+      break;
+
+    case "normal":
+      typeContainer.style.backgroundColor = "#c4bfb7"
+      break;
+      
+    case "poison":
+      typeContainer.style.backgroundColor = "#944690"
+      break;
+
+    case "psychic":
+      typeContainer.style.backgroundColor = "#e9457e"
+      break;
+
+    case "rock":
+      typeContainer.style.backgroundColor = "#b8a154"
+      break;
+
+    case "steel":
+      typeContainer.style.backgroundColor = "#b8b8c4"
+      break;
+
+    case "water":
+      typeContainer.style.backgroundColor = "#3394f3"
+      break;
+
+    default:
+      break;
+  }
+
 }
 
 carregarPokeCards.then(
@@ -380,4 +472,11 @@ function createSearchList(){
   
     pokeSearch.appendChild(item)
   })
+}
+
+function toTitle(text) {
+
+  const title = text.slice(0, 1).toUpperCase() + text.slice(1, )
+
+  return title
 }

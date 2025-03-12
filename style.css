@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'pokemon-emerald-font';
+    src: url(src/assets/font/pokemon-emerald.ttf) format("truetype");
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -187,21 +192,27 @@ header {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    padding: 3px;
 }
 
 .pokemonTypes {
-    background-color: rgba(0, 255, 255, 0);
     width: 65%;
     height: 32px;
     margin-top: 2px;
 
+    font-family: 'pokemon-emerald-font', 'Arial Narrow', Arial, sans-serif;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
+    gap: 5px;
 }
 
 .pokemonTypes p {
     background-color: rgb(179, 179, 179);
-    width: 50px;
+    width: 60px;
     text-align: center;
+    color: white;
+    padding: 2px 8px;
 }
