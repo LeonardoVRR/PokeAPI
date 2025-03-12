@@ -289,6 +289,8 @@ carregarPokeCards.then(
 function filters(e) {
   const allPokeCards = document.querySelectorAll(".pokemonCards__card")
   const filtroSelecionado = e.target.id
+
+  console.log(filtroSelecionado)
   
   if (filtroSelecionado === "typePokemon") {
 
@@ -377,7 +379,7 @@ function filters(e) {
         const pokeName = (card.children[1].children[1].textContent).slice(0, nameFilter.value.length)
         const nameValue = pokeNameValue.toLowerCase()
         
-        if (nameValue === pokeName){
+        if (nameValue === pokeName.toLowerCase()){
           card.removeAttribute("style")
         }
 
